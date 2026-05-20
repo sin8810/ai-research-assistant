@@ -1,12 +1,7 @@
-from tools.pdf_reader import read_pdf
-from tools.summarizer import summarize_text
+from agent import process_document
 
 file_path = "sample_data/sample.pdf"
 
-content = read_pdf(file_path)
+result = process_document(file_path)
 
-summary = summarize_text(content)
-
-print("\nAI SUMMARY:\n")
-
-print(summary)
+print(result)
